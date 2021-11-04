@@ -1,0 +1,33 @@
+{% extends "base.html" %}    
+    
+{% block content %}
+
+<h1>{{ title }}</h1>
+
+<main>
+    <header>
+        <h5>Date</h5>
+        <h5>Name</h5>
+        <h5># of guests</h5>
+        <h5>Room</h5>
+        <h5>Description</h5>
+        <h5>Recurring</h5>
+    </header>
+
+    {% for event in list_of_events %}
+
+        <section>  
+            <h6>{{event.date.strftime("%b %d %Y")}}</h6>
+            <h6>{{event.name}}</h6>
+            <h6>{{event.guests}}</h6>
+            <h6>{{event.room_location}}</h6>
+            <h6>{{event.description}}</h6>
+            
+            {% if event.recurring %}
+                <span>&#9989;</span>
+            {% endif %}
+        </section>
+
+    {% endfor %}
+</main>
+{% endblock %}
