@@ -4,19 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
     <title>{{title}}</title>
 </head>
 <body>
-    <h1>{{title}}</h1>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/listofevents">List of Events</a></li>
-            <li><a href="/addevent">Add an event</a></li>
-        </ul>
-    </nav>
+    <header>
+        <!-- <h1>Logo</h1> -->
+        <img src="img/Logo.png" alt="logo">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/listofevents">List of Events</a></li>
+                <li><a href="/addevent">Add an event</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <hr>
+
     {% block content%}
 
     {% endblock %}

@@ -17,7 +17,7 @@
     {% for event in list_of_events %}
 
         <section>  
-            <h6>{{event.date.strftime("%b %d %Y")}}</h6>
+            <h6>{{event.date}}</h6>
             <h6>{{event.name}}</h6>
             <h6>{{event.guests}}</h6>
             <h6>{{event.room_location}}</h6>
@@ -30,4 +30,30 @@
 
     {% endfor %}
 </main>
+
+<form action="/listofevents" method="post">
+    <label for="date">Date</label>
+    <input type="text" name="date" id="date">
+    <!-- <input type="date" name="Date" id="date"
+        value="2021-11-04"
+        min="2021-11-04" max="2031-12-31"> -->
+    
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name">
+
+    <label for="guests"># of guests</label>
+    <input type="number" name="guests" id="guests">
+
+    <label for="room">Room</label>
+    <input type="text" name="room" id="name">
+
+    <label for="description">Description</label>
+    <input type="text" name="description" id="description">
+
+    <label for="recurring">Recurring</label>
+    <input type="checkbox" name="recurring" id="recurring">
+
+    <input type="submit" value="Add event">
+</form>
+
 {% endblock %}

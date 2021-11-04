@@ -1,0 +1,17 @@
+body{
+    background-color: #fffadd;
+    font-family: helvetica, arial, sans-serif;
+}
+body > header{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+}
+
+header > a{
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    font-style: none;
+}

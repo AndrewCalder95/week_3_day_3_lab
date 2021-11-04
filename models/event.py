@@ -5,4 +5,4 @@ class Event:
         self.guests = guests
         self.room_location = room_location
         self.description = description
-        self.recurring = recurring
+        # self.recurring = recurring
